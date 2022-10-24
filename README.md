@@ -216,3 +216,11 @@ Hal-hal yang bisa dilakukan untuk mengembangkan project dan modelnya lebih baik 
 - Melakukan penambahan data khususnya untuk kelas minoritas (Churn) agar dapat membantu meningkatkan performa model.
 - Mencoba algorithm ML dan hyperparameter tuning yang berbeda (misal algoritma Logistic Regression, CatBoost, etc) serta menggunakan teknik oversampling yang berbeda selain SMOTENC. 
 - Menganalisa data-data yang model yang masih salah tebak (False Negative dan False Positive) untuk mengetahui alasan dan karakteristiknya.
+
+
+## best_model_lightgbm.sav
+- file model LightGBM yang sudah disimpan melalui pickle
+
+
+## best_model_decisiontree.sav
+- file model Decision Tree yang sudah disimpan melalui pickle
