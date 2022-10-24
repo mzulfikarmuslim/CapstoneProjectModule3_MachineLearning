@@ -139,21 +139,19 @@ informasi penting pada data tersebut.
 - pada data kita terdapat fitur yang numerikal (continuous) and kategorikal (nominal).
 
 ## **MODELING & EVALUATION**
+- Terlampir pada file
 
 ## **CONCLUSION & RECOMMENDATION**
 #### *CONCLUSION*
 
 - Metric utama yang akan kita gunakan adalah f2_score, karena recall kita anggap dua kali lebih penting daripada precision.
     <br>
-    <br>
 - Berdasarkan hyperparameter tuning, parameter terbaik yang dapat digunakan untuk benchmark model Decision Tree adalah :
     - max_depth = 2 
     - min_samples_split=182
     - min_samples_leaf=21
     <br>
-    <br>
 - Berdasarkan pemodelan Decision Tree, fitur/kolom `Contract` adalah yang paling penting dan berpengaruh terhadap target (Churn), kemudian diikuti dengan `tenure` dan `MonthlyCharges`.
-    <br>
     <br>
 - Interpretasi pada plot tree dari Decision Tree adalah sebagai berikut :
     - Jika ada pelanggan dengan `Contract` Two year atau One Year dan membayar `Monthly Charges` <= 102.11, maka pelanggan tersebut akan bertahan (Not Churn)
@@ -161,12 +159,10 @@ informasi penting pada data tersebut.
     - Jika ada pelanggan dengan `Contract` 'Month-to-Month' dan memiliki `tenure` <= 10.5 bulan, maka pelanggan tersebut akan berhenti berlangganan (Churn)
     - Jika ada pelanggan dengan `Contract` 'Month-to-Month' dan memiliki `tenure` > 10.5 bulan, maka pelanggan tersebut akan berhenti berlangganan (Churn)
     <br>
-    <br>
 - Berdasarkan hyperparameter tuning, parameter terbaik yang dapat digunakan untuk benchmark model LightGBM adalah :
     - scale_pos_weight = 5
     - learning_rate = 0.01
     - max_depth = 6
-    <br>
     <br>
 - Interpretasi SHAP untuk model LightGBM :
     - Pelanggan dengan `Contract` Month-to-month cenderung memiliki kemungkinan Churn yang lebih tinggi. Sedangkan semakin panjang `Contract` One-year dan Two-year, maka semakin besar kemungkinan untuk Not Churn.
@@ -175,12 +171,10 @@ informasi penting pada data tersebut.
     - Pelanggan dengan `InternetService` Fiber optic, cenderung memiliki kemungkinan Churn yang lebih tinggi dibandingkan dengan pelanggan yang menggunakan `InternetService` DSL atau No. Bahkan pelanggan tanpa `InternetService` cenderung untuk Not Churn.
     - Pelanggan tanpa `OnlineSecurity`, cenderung memiliki kemungkinan Churn yang lebih tinggi dibandingkan yang menggunakan `OnlineSecurity`.
     <br>
-    <br>
 - Berdasarkan contoh perhitungan biaya :
     - Potensi kerugian yang mungkin didapat tanpa adanya penerapan machine learning diperkirakan sebesar : $16572.02 per bulan untuk 986 pelanggan
     - Potensi kerugian yang mungkin didapat dengan menerapkan model Decision Tree yang telah dibuat diperkirakan sebesar : $16106.04 per bulan untuk 986 pelanggan
     - Potensi kerugian yang mungkin didapat dengan menerapkan model LightGBM yang telah dibuat diperkirakan sebesar : $15799.49 per bulan untuk 986 pelanggan.
-    <br>
     <br>
 - Berdasarkan contoh hitungan tersebut, terlihat bahwa dengan menggunakan model kita, maka perusahaan dapat menghemat sebesar :
     - Dengan Model Decision Tree : $ 465.98 per bulan untuk 986 pelanggan.
